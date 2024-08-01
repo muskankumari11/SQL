@@ -19,3 +19,5 @@ VALUES
 (104, "dhuruv", 96, "A", "Delhi"),
 (105, "emanuel", 12, "F", "Delhi"),
 (106, "farah", 82, "B", "Delhi");
+
+SELECT * FROM student;
