@@ -1,0 +1,19 @@
+CREATE DATABASE colg;
+
+USE colg;  
+
+CREATE TABLE students(
+    rollno INT PRIMARY KEY,
+    name VARCHAR(50)
+);
+
+SELECT * FROM students;
+
+CREATE TABLE temp1(
+id INT UNIQUE
+);
+
+INSERT INTO temp1 VALUES (101);
+INSERT INTO temp1 VALUES (101);
+
+SELECT * FROM temp1;
