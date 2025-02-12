@@ -3,3 +3,11 @@ FROM Employee
 GROUP BY (months*salary)
 ORDER BY (months*salary)
 desc LIMIT 1
+
+-- 2nd method
+
+SELECT MAX(months * salary), COUNT(*)
+
+FROM Employee
+
+WHERE months * salary = (SELECT MAX(months * salary) FROM Employee);
