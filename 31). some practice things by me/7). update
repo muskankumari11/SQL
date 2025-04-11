@@ -24,3 +24,33 @@ where id=12;
 
 select*
 from collegee
+
+--2
+CREATE DATABASE university;
+CREATE DATABASE aktu;
+USE university;
+
+CREATE TABLE collegef(
+id int PRIMARY KEY,
+fname varchar(30),
+lname varchar(30),
+age int,
+marks int 
+);
+
+INSERT INTO collegef(id, fname, lname, age, marks)
+values
+(10,'ram', 'lal',18,55),
+(11,'pam', 'pal',21, null),
+(12,'tam','tal',18,75),
+(13,'kam','kal',21,90),
+(14,'dam','dal',15, null),
+(15,'jam','jal',25,90);
+
+update collegef
+set fname='papu',
+lname='aalu'
+where id=15;
+
+select*
+from collegef
