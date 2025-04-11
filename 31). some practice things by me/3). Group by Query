@@ -1,0 +1,24 @@
+CREATE DATABASE university;
+CREATE DATABASE aktu;
+USE university;
+
+CREATE TABLE colleges(
+id int PRIMARY KEY,
+name varchar(30),
+age int,
+marks int 
+);
+
+INSERT INTO colleges(id, name, age, marks)
+values
+(10,'ram',18,55),
+(11,'pam',21,50),
+(12,'tam',18,75),
+(13,'kam',21,90);
+
+select  age, count(*)
+from colleges
+group by age;
+
+note-> GROUP BY kisi specific column ke identical (same) values wali rows ko ek group me le aata hai.
+So, row nahi — column ke data pe based hota hai grouping.
