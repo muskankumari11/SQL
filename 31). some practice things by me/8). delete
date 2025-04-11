@@ -1,0 +1,28 @@
+CREATE DATABASE university;
+CREATE DATABASE aktu;
+USE university;
+
+CREATE TABLE collegeg(
+id int PRIMARY KEY,
+fname varchar(30),
+lname varchar(30),
+age int,
+marks int 
+);
+
+INSERT INTO collegeg(id, fname, lname, age, marks)
+values
+(10,'ram', 'lal',18,55),
+(11,'pam', 'pal',21, null),
+(12,'tam','tal',18,75),
+(13,'kam','kal',21,90),
+(14,'dam','dal',15, null),
+(15,'jam','jal',25,90);
+
+DELETE FROM collegeg
+WHERE id = 10 OR id = 12;
+
+select * from collegeg;
+
+--note -> yaha pe delte normally nahi ho raha tha kyuki primary key nahi hai jab or lagaye to delte hua MySQL Workbench mein default setting hoti hai Safe Updates Mode, jisme bina primary key ya unique key ke DELETE aur UPDATE queries nahi chalte.
+Aap age = 18 se delete kar rahe ho, lekin age column primary key nahi hai. Isiliye MySQL Workbench rok raha hai.
