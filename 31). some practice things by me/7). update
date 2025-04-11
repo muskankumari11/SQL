@@ -1,0 +1,26 @@
+CREATE DATABASE university;
+CREATE DATABASE aktu;
+USE university;
+
+CREATE TABLE collegee(
+id int PRIMARY KEY,
+name varchar(30),
+age int,
+marks int 
+);
+
+INSERT INTO collegee(id, name, age, marks)
+values
+(10,'ram',18,55),
+(11,'pam',21, null),
+(12,'tam',18,75),
+(13,'kam',21,90),
+(14,'dam',15, null),
+(15,'jam',25,90);
+
+update collegee
+set id=80
+where id=12;
+
+select*
+from collegee
