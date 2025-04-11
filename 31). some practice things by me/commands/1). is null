@@ -1,0 +1,19 @@
+CREATE TABLE colleged(
+id int PRIMARY KEY,
+name varchar(30),
+age int,
+marks int 
+);
+
+INSERT INTO colleged(id, name, age, marks)
+values
+(10,'ram',18,55),
+(11,'pam',21, null),
+(12,'tam',18,75),
+(13,'kam',21,90),
+(14,'dam',15, null ),
+(15,'jam',25,90);
+
+select marks, name
+from colleged
+where marks is null;
