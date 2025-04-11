@@ -1,0 +1,20 @@
+CREATE DATABASE university;
+CREATE DATABASE aktu;
+USE university;
+
+CREATE TABLE college(
+id int PRIMARY KEY,
+name varchar(30),
+age int,
+marks int 
+);
+
+INSERT INTO college(id, name, age, marks)
+values
+(10,'ram',18,55),
+(11,'pam',19,50),
+(12,'tam',20,75),
+(13,'kam',21,90);
+
+select max(marks)
+from college
