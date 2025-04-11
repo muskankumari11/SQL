@@ -1,0 +1,26 @@
+CREATE DATABASE university;
+CREATE DATABASE universityy;
+USE universityy;
+
+CREATE TABLE Student(
+StudentID int PRIMARY KEY,
+Fname varchar(30),
+Lname varchar(30),
+City varchar(50),
+age int,
+marks int 
+);
+
+INSERT INTO Student(StudentID, Fname, Lname, City,age, marks)
+values
+(10,'ram', 'lal','Delhi',18,55),
+(11,'pam', 'pal','Goa',21, null),
+(12,'tam','tal','Pune',18,75),
+(13,'kam','kal','Bengaluru',21,90),
+(14,'dam','dal','America', 15, null),
+(15,'jam','jal','Japan',25, 90);
+
+
+select StudentID, Fname, Lname
+from Student
+where City IN ('Delhi','America','Goa', 'Pune', 'Bengaluru');
