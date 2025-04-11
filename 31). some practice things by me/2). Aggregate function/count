@@ -1,0 +1,20 @@
+CREATE DATABASE university;
+CREATE DATABASE aktu;
+USE university;
+
+CREATE TABLE collegea(
+id int PRIMARY KEY,
+name varchar(30),
+age int
+);
+
+INSERT INTO collegea(id, name, age)
+values
+(10,'ram',18),
+(11,'pam',19),
+(12,'tam',20),
+(13,'kam',21);
+
+select count(age)
+from collegea
+where id>10;
