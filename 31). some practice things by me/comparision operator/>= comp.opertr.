@@ -1,0 +1,22 @@
+CREATE DATABASE university;
+CREATE DATABASE Employee;
+USE Employee;
+
+CREATE TABLE Depts(
+EmployeeId int PRIMARY KEY,
+Dept_name varchar(30),
+Loc varchar(30),
+Age int
+);
+
+INSERT INTO Depts(EmployeeId, Dept_name, Loc, Age)
+values
+(101, 'Account','Chennai', 20),
+(102,'Marketing', 'Chennai',55),
+(103, 'new1','Hydrabaad',40),
+(104,'new2', 'Hydrabaad',56);
+
+
+select *
+from Depts
+where age>=56;
