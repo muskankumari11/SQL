@@ -1,0 +1,21 @@
+CREATE DATABASE university;
+CREATE DATABASE Employee;
+USE Employee;
+
+CREATE TABLE Dept(
+EmployeeId int PRIMARY KEY,
+Dept_name varchar(30),
+Loc varchar(30)
+);
+
+INSERT INTO Dept(EmployeeId, Dept_name, Loc)
+values
+(101, 'Account','Chennai'),
+(102,'Marketing', 'Chennai'),
+(103, 'new1','Hydrabaad'),
+(104,'new2', 'Hydrabaad');
+
+
+select Dept_name, Loc
+from Dept
+where Loc IN ('Hydrabaad');
