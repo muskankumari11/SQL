@@ -1,0 +1,33 @@
+create database new;
+use new;
+
+create table emp(
+id INT PRIMARY KEY,
+name varchar(30),
+age int
+);
+
+insert into emp(id, name,age)
+values
+(101,'ram',12),
+(102,'kam',13),
+(103,'dam',14),
+(106,'bam',15);
+
+
+create table projects(
+id INT PRIMARY KEY,
+name varchar(30),
+pid int
+);
+
+insert into projects(id, name,pid)
+values
+(101,'ramu',122),
+(102,'kamu',133),
+(108,'newone', 155);
+
+select emp.id, emp.name, projects.name
+from emp
+left join projects
+on emp.id=projects.id; 
