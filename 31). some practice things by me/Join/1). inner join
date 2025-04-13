@@ -1,0 +1,52 @@
+CREATE DATABASE Employees;
+USE Employees;
+
+-- Create the emp table
+CREATE TABLE emp (
+    empid INT,
+    empfname VARCHAR(50),
+    emlname VARCHAR(50),
+    age INT,
+    phonenum VARCHAR(15),
+    address VARCHAR(100)
+);
+
+-- Insert data into emp
+INSERT INTO emp (empid, empfname, emlname, age, phonenum, address) VALUES
+(1, 'vardhan', 'kumar', 22, '9876543210', 'delhi'),
+(2, 'himani', 'sharma', 32, '9876543211', 'mumbai'),
+(3, 'ayushi', 'shresth', 24, '9876543212', 'kolkata'),
+(4, 'hemanth', 'sharma', 25, '9876543213', 'bengluru'),
+(5, 'swatee', 'kapoor', 26, '9876543214', 'hydravad');
+
+-- Create the projects table
+CREATE TABLE projects (
+    projectid INT,
+    empid INT,
+    clientid INT,
+    projectname VARCHAR(100),
+    projectstartdate DATE
+);
+
+-- Insert data into projects
+INSERT INTO projects (projectid, empid, clientid, projectname, projectstartdate) VALUES
+(111, 1, 101, 'project1', '2019-04-21'),
+(222, 2, 102, 'project2', '2020-05-15'),
+(333, 3, 103, 'project3', '2021-06-10'),
+(444, 4, 104, 'project4', '2022-07-12'),
+(555, 5, 105, 'project5', '2023-08-18'),
+(666, 9, 106, 'project6', '2024-09-20'),
+(777, 7, 107, 'project7', '2025-10-25'),
+(888, 8, 108, 'project8', '2026-11-30');
+
+-- Select all from emp
+SELECT * FROM emp;
+
+-- Select all from projects
+SELECT * FROM projects;
+
+-- Perform the correct INNER JOIN between emp and projects
+SELECT emp.empid, emp.empfname, emp.emlname, projects.projectid, projects.projectname, projects.projectstartdate
+FROM emp
+INNER JOIN projects
+ON emp.empid = projects.empid;
