@@ -1,0 +1,5 @@
+-- in mysql workbech elt used
+SELECT ELT(3, 'Test', 'Zest', 'Rest', 'Nest'); 
+
+--in sql server choose is used
+SELECT CHOOSE(3, 'Test', 'Zest', 'Rest', 'Nest'); 
