@@ -1,0 +1,5 @@
+-- in sql server
+select IIF(1>10, 'True', 'False')
+
+--in mysql workbench
+select IF(1>10, 'True', 'False')
