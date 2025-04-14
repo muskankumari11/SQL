@@ -1,0 +1,51 @@
+CREATE DATABASE news;
+USE news;
+
+CREATE TABLE colleges (
+  id int PRIMARY KEY,
+  name varchar(30),
+  age int,
+  marks int
+);
+
+INSERT INTO colleges (id, name, age, marks)
+VALUES
+(10, 'ram', 18, 55),
+(11, 'pam', 19, 50),
+(12, 'tam', 20, 75),
+(13, 'kam', 21, 90);
+
+update colleges
+set marks=55
+where id=12;
+
+SELECT AVG(DISTINCT marks)
+FROM colleges;
+
+select*
+from colleges;
+
+select avg(age)
+from colleges;
+
+select count(age)
+from colleges;
+
+select count( distinct marks)
+from colleges;
+
+select max( marks)
+from colleges;
+
+select min( marks)
+from colleges;
+
+select sum(name)
+from colleges;
+
+-- o/p-> 0 
+
+select sum(age)
+from colleges;
+
+-- o/p-> 78
